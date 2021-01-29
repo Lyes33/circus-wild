@@ -1,0 +1,228 @@
+/*================================================
+CSS
+==================================================*/
+html, body {
+    margin: 0; 
+    padding: 0;
+    overflow-x: hidden;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    /*    background: #212121;*/
+    background: #790c0c;
+
+}
+.header_nav{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    color: white;
+}
+
+.header_nav_menu2_lien{
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-weight: 500;
+    margin-right: auto;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+}
+.header_nav_menu2_lien:hover {
+    text-decoration: none;
+    color: white;
+    box-shadow: 10px 5px 5px #f0edea;
+}
+
+.header_nav_toggle{
+    width: 45px;
+    height: 60px;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+}
+.haeder_nav_toggle_icon, .haeder_nav_toggle_icon::before, .haeder_nav_toggle_icon::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    position: relative;
+    background: white;
+
+}
+.haeder_nav_toggle_icon::after{
+    top: -14px;
+}
+.haeder_nav_toggle_icon::before{
+    top: 10px;
+}
+.is-open .header_nav_menu2{
+    transform: translateX(0);
+}
+.header_nav.is-open span.haeder_nav_toggle_icon::before, .header_nav.is-open span.haeder_nav_toggle_icon::after {
+    transform-origin: center;
+    transform: rotate(45deg);
+    top: 0;
+}
+.header_nav.is-open span.haeder_nav_toggle_icon::after{
+    transform: rotate(-45deg);
+}
+.header_nav.is-open  span.haeder_nav_toggle_icon{
+    background: transparent;
+}
+/*================================================================
+on adapte l'affichage du menu aux petits écrans
+==================================================================*/
+@media only screen and (max-width: 1080px){
+/*
+    .header_nav_menu1_lien {
+        display: none;
+    }
+*/
+    .header_nav_toggle{
+        display: flex;
+        z-index: 2;
+    }
+    .header_nav_menu2{
+        transform: translateX(-100%);
+        display: flex;
+        position: absolute;
+        background: #263238;
+        width: auto;
+        height: auto;
+        top: 60px;
+        left: 0px;
+        flex-direction: column;
+        justify-content:center;
+        transition: all 0.3s ease-in-out;
+        z-index: 3;
+    }
+
+    .header_nav_menu2_lien{
+        margin: 20px;
+    }
+    .header_nav_menu1_lien:hover,.header_nav_menu2_lien:hover {
+        text-decoration: none;
+        color: white;
+    }
+    
+/*
+    .logo{
+  display: none;
+}
+*/
+    section{
+    border-bottom: 1px solid white;
+}
+ 
+}
+/*=================================================
+CSS PERFORMANCES
+===================================================*/
+
+section ul{
+    list-style-type: none;
+}
+
+section .sec{
+    color:#790c0c;
+    text-align: center;
+    padding-top: 20px;
+}
+/*================================================
+CSS ABOUT
+==================================================*/
+.show{
+    text-align: center;
+    margin-top: 20px;
+}
+.imsh{
+    width: 80%;
+
+}
+
+.lp:hover{
+    text-decoration:none;
+
+}
+
+.ticket{
+    background-color: #ded60e;
+    padding:5px;
+    border-radius: 12px;
+    color: black;
+    margin-bottom: 10px;
+}
+.ticket:hover{
+    background-color: #f21313;
+    color: wheat;
+
+}
+/*================================================
+CSS FORM CONTACT
+==================================================*/
+.f_contact{
+    margin-top: 60px;
+    width: 70%;
+    min-height: 408px;
+/*    border: 1px dashed black;*/
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.checkbox{
+    color:red;
+}
+
+.checked{       
+    color: green;
+}
+
+/*==============================================
+CSS FOOTER
+================================================*/
+
+.footer{
+    min-height: 120px;
+    background: #263238;
+    margin-top: 20px;
+}
+
+.footer section{
+    border-right: 1px solid white;
+}
+
+/*
+ul{
+    list-style-type: none;
+}
+*/
+
+.footer section ul li a {
+    color: white;
+}
+.footer section ul li a:hover{
+    color: red;
+    text-decoration: none;
+}
+
+.footer section ul li,h6{
+    color: white;
+    font-weight: 500;
+}
+
+.footer section ul li a i{
+    margin: 5px;
+}
+.copyright{
+    color: white;
+    padding-bottom: 20px;
+    margin: auto;
+}
+
